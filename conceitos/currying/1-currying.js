@@ -16,4 +16,10 @@ soma(2,5);
 -JavaScript não é por padrão funcional, mas é adaptável
 CURRYING: É a técnica de transformar uma função com n(mais de 1) parâmetros
 em apenas 1 função que recebe 1 parâmetro e para cada parâmetro vai
-retornando uma nova função*/
+retornando uma nova função
+Outra forma de definir: 
+Currying é o nome dado à técnica de dividimos uma função que recebe vários argumentos 
+numa série de funções cada uma lidando com um argumento da função inicial.
+*Pode ser confundido com partial application que é a "memorização" de um argumento e 
+depois tratar os outros(que sejam mais que 1) adicionando-os de uma vez e não um de cada
+vez*/
