@@ -2,7 +2,7 @@
 const name = 'Luciana';
 
 //Não podemos alterar o valor
-name = 'Guilherme';
+//name = 'Guilherme';
 
 const user = {
     name: 'Luciana'
@@ -12,9 +12,9 @@ user.name = 'Outro nome';
 console.log(user.name);
 
 //Não podemos fazer o objeto "apontar" para outro lugar
-user = {
+/*user = {
     name: 'Luciana'
-};
+};*/
 
 /*Além de criar constantes, quando atribuido um valor 
 primitivo a const ele não permitirá a mudança de valor da variável, 
@@ -30,3 +30,26 @@ Recapitulando:
 mas não a referência.
  */
 //Essa parte é para detalhar alguns aspectos do const
+
+//Array
+
+const persons = ['Guilherme', 'Pedro', 'Jennifer'];
+
+//Podemos adicionar novos itens
+persons.push('João');
+//['Guilherme', 'Pedro', 'Jennifer', 'João']
+
+//Podemos remover algum item
+persons.shift();
+//['Pedro', 'Jennifer', 'João']
+
+//Podemos alterar diretamente
+persons[1] = 'James';
+//['Pedro', 'James', 'João']
+
+console.log('\nArray após as alterações: ', persons);
+
+/*O mesmo ocorre com arrays. Porém tem algumas especificidades:
+Consigo adicionar, remover, alterar items*/
+//Mas não consigo mudar para outro array/trocar a referência
+//para por exemplo: persons = [1,2,3];
