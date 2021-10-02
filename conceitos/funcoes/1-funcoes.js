@@ -2,8 +2,8 @@ function getName() {
     return 'Luciana Sarai Nunes';
 }
 
-function logFn(fn) {
-    console.log(fn()); //Retornando a função fn()/getName() (primeira-classe e ordem maior)
+function logFn(fn) { //(função de ordem maior/superior)
+    console.log(fn()); //Retornando a função fn()/getName() (primeira-classe)
 }
 
 const logFnResult = logFn; //Atribuição da função logFn como variável(primeira-classe)
