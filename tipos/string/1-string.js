@@ -19,3 +19,11 @@ console.log('\nValor da string da primeira letra menos a última:', allWithoutLa
 
 const secondToEnd = 'Texto'.slice(1);
 console.log('\nValor da string da segunda letra até a última:', secondToEnd);
+
+//Retorna N caracters a partir de uma posição
+const twoCharsBeforeFirstPos = 'Texto'.substr(0, 2);
+console.log('\n As duas primeiras letras são:', twoCharsBeforeFirstPos);
+
+/*A diferença entre slice() e substr() é que no slice passamos o primeiro 
+caractér e o último que queremos e no substr passamos o primeiro caractér 
+e quantos caractéres queremos a partir dali. */
