@@ -17,3 +17,5 @@ console.log('\nÚltima letra de uma string:', lastChar);
 const allWithoutLastChar = 'Texto'.slice(0, -1);
 console.log('\nValor da string da primeira letra menos a última:', allWithoutLastChar);
 
+const secondToEnd = 'Texto'.slice(1);
+console.log('\nValor da string da segunda letra até a última:', secondToEnd);
