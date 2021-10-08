@@ -26,3 +26,7 @@ function getProp(prop) {
 */
 
 //console.log(user);
+
+//Criando uma propriedade
+user.lastName = 'Sarai Nunes';
+console.log(user);
