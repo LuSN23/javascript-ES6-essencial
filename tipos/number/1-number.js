@@ -10,3 +10,6 @@ console.log('\nNúmero com duas casas decimais: ', fixedTwoDecimals);
 
 //Transforma uma string em float(do tipo Number)
 console.log('\nString parseada para float: ', parseFloat('13.22'));
+
+//Transforma uma string em int(do tipo Number)
+console.log('\nString parseada para int:', parseInt('13.20'));
