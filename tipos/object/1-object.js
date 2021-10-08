@@ -6,9 +6,9 @@ console.log(user);
 
 //Alterando a propriedade de um objeto
 user.name = 'Outro nome 1';
-//console.log(user);
+console.log(user);
 user['name'] = 'Outro nome 2';
-//console.log(user);
+console.log(user);
 
 /* Para acessar a propriedade pode ser de 2 formas user.name, 
 ou como se fosse um array e 'name' seu índice.
@@ -25,8 +25,12 @@ function getProp(prop) {
 } 
 */
 
-//console.log(user);
+console.log(user);
 
 //Criando uma propriedade
 user.lastName = 'Sarai Nunes';
+console.log(user);
+
+//Deletando uam propriedade
+delete user.name;
 console.log(user);
