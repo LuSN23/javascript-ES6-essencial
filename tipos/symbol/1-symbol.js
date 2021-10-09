@@ -7,7 +7,7 @@ console.log('symbol1 é igual a simbol2:', symbol1 === symbol2); //Dá false
 /*A princípio a grande proposta do symbol era permitir atributos privados dentro 
 de objetos ou classes, mas como o JavaScript não tem o modificador de acesso(private, public, 
 protected) algumas pessoas utilizam a mesma convensão do Python de colocar o _ na frente, porém 
-não faz parte da documentação, ele acabou por ser mais um atributo único mesmo*/
+não faz parte da especificação, ele acabou por ser mais um atributo único mesmo*/
 
 //Previnir conflito entre nomes de propriedades
 //Perceba que a inicialização deles são iguais
@@ -50,3 +50,8 @@ no entanto, outras maneiras de fazer isso*/
 //Exibir Symbols de um objeto
 console.log('Symbols registrados no objeto user:', Object.getOwnPropertySymbols(user));
 //Object.getOwnPropertySymbols() retorna um array com todas as propriedades Symbol de um objeto 
+
+//Acessando todas as propriedades de um objeto
+console.log('Todas as propriedades do objeto user:', Reflect.ownKeys(user)); //Apenas as chaves/propriedades
+/* Reflect não é um objeto construtor(não é possível instanciá-lo) e suas 
+propriedades e métodos são estáticos. Uma mistura dos operadores in e delete */
