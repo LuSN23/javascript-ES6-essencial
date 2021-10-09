@@ -35,6 +35,9 @@ propridades.
 hasOwnProperty() retorna um valor boolean indicando se o objeto tem a propriedade 
 específica(que não seja herdada mas própria)
 */
+console.log('Propriedades do objeto user:', Object.keys(user));
+console.log('Valores das propriedades do objeto user:', Object.values(user));
+//Object.keys() e Object.values() também só retornam as propriedades enumerables
 
 /*ENUMERABLES: São as propriedades que tem a flag interna setada como true, o 
 que é default para propriedades criadas a partir de simples atribuição ou via 
