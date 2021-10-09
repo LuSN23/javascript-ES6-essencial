@@ -46,3 +46,7 @@ um inicializador de propriedade*/
 não aparecerá na saída. Mostra um pouco do modificador de acesso private, porque não 
 dá para acessar o symbol com estruturas padrão do JavaScript como as de repetição. Há 
 no entanto, outras maneiras de fazer isso*/
+
+//Exibir Symbols de um objeto
+console.log('Symbols registrados no objeto user:', Object.getOwnPropertySymbols(user));
+//Object.getOwnPropertySymbols() retorna um array com todas as propriedades Symbol de um objeto 
