@@ -48,3 +48,16 @@ console.log('\nConstante newObj após as alterações:', newObj); //Será a mesm
 mas não consegue alterar a referência(para onde aponta na memória), porém usando 
 o método freeze() você consegue congelar e não permitir mais alterações das propriedades*/ 
 
+//Permite apenas a alteração de propriedades existentes em um objeto
+const person = { name: 'Luciana' };
+Object.seal(person);
+
+person.name = 'Luciana Sarai';
+delete person.name;
+person.age = 26;
+
+console.log('\nConstante person após as alterações:', person);
+/*freeze() x seal(): 
+freeze(): [1]não permite alterar valor de uma propriedade,
+[2]deletar a propriedade e nem [3]adicionar uma propriedade.
+seal(): [1]permite apenas alterar o valor de uma propriedade*/
