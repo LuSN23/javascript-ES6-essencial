@@ -55,3 +55,13 @@ console.log('Symbols registrados no objeto user:', Object.getOwnPropertySymbols(
 console.log('Todas as propriedades do objeto user:', Reflect.ownKeys(user)); //Apenas as chaves/propriedades
 /* Reflect não é um objeto construtor(não é possível instanciá-lo) e suas 
 propriedades e métodos são estáticos. Uma mistura dos operadores in e delete */
+
+//Criar um enum
+const directions = {
+    UP   : Symbol( 'UP' ),
+    DOWN : Symbol( 'DOWN' ),
+    LEFT : Symbol( 'LEFT' ),
+    RIGHT: Symbol( 'RIGHT' )
+};
+//ENUMs(enumeradores): são valores pré-definidos
+//É possível "simular" ENUMs usando Symbols
