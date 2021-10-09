@@ -33,3 +33,18 @@ const source = { b: 4, c: 5 };
 
 const returnedTarget = Object.assign(target, source);
 */
+
+//CONSTANTES
+//Previne toda as alterações em um objeto
+const newObj = {foo: 'bar'};
+Object.freeze(newObj);
+
+newObj.foo = 'changes';
+delete newObj.foo;
+newObj.bar = 'foo';
+
+console.log('\nConstante newObj após as alterações:', newObj); //Será a mesma coisa do início
+/*Lembrando que em objetos de constantes você consegue alterar as propriedades, 
+mas não consegue alterar a referência(para onde aponta na memória), porém usando 
+o método freeze() você consegue congelar e não permitir mais alterações das propriedades*/ 
+
