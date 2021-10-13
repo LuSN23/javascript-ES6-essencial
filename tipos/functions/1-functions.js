@@ -11,3 +11,10 @@ const arrowFn2 = () => {
     return 'Code here';
 }
 
+//Funções são objetos que permitem serem chamados
+//Funções também são objetos, então é possível adicionar propriedades à elas
+fn.prop = 'Posso criar propriedades';
+console.log(fn());
+console.log(fn.prop);
+
+
