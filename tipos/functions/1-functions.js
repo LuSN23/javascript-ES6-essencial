@@ -17,4 +17,10 @@ fn.prop = 'Posso criar propriedades';
 console.log(fn());
 console.log(fn.prop);
 
+//Receber parâmetros
+const logValue = value => console.log(value);
+const logFnResult = fnParam => console.log(fnParam); //Funções de primeira classe e ordem maior
+
+logFnResult(fn);
+//Usado bastante em bibliotecas, React quando é preciso fazer algo antes de executar alguma regra
 
