@@ -24,3 +24,16 @@ const logFnResult = fnParam => console.log(fnParam); //Funções de primeira cla
 logFnResult(fn);
 //Usado bastante em bibliotecas, React quando é preciso fazer algo antes de executar alguma regra
 
+//Receber e retornar funções
+const controlFnExec = fnParam => allowed => {
+    if (allowed) {
+        fnParam();
+    }
+}
+
+const handleFnExecution = controlFnExec(fn);
+
+handleFnExecution(true); //Executará a função fn
+handleFnExecution();     //Não executará a função fn
+
+//Conseguimos compor/encadear esse permissionamento
