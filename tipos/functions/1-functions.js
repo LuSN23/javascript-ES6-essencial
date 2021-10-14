@@ -37,3 +37,12 @@ handleFnExecution(true); //Executará a função fn
 handleFnExecution();     //Não executará a função fn
 
 //Conseguimos compor/encadear esse permissionamento
+
+//controlFnExec como função
+function controlFnExec(fnParam) {
+    return function(allowed) {
+        if(allowed) {
+            fnParam();
+        }
+    }
+}
