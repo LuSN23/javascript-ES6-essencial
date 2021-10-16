@@ -56,3 +56,20 @@ const personsWithCourse = persons.map(person => {
 
 console.log('\nPessoas com a adição do course: ', personsWithCourse);
 //Gera valores alterados percorrendo cada item da coleção de valores do array
+
+//Transformar um array em outro tipo
+const totalAge = persons.reduce((age, person) => {
+    age += person.age;
+    return age;
+}, 0);
+
+console.log('\nSoma de idade das pessoas', totalAge);
+/* Retorna a primeira variável age, e person o item que estou iterando.
+Transforma o nosso array em outro tipo.
+Também irá receber uma função.
+Reduz vários valores a uma informação.
+Importante retornar a propriedade aqui representada pelo age 
+O 0 faz o JavaScript fazer uma conversão para number de um array(idade das pessoas)
+O age começa com 0
+Os parâmetros e a função são o handler
+*/ 
