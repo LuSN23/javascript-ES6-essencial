@@ -47,3 +47,12 @@ persons.forEach((person, index, arr) => {
 const womans = persons.filter(person => person.gender === gender.WOMAN);
 console.log('\nNova lista apenas com mulheres:', womans);
 //filter é uma condicional
+
+//Retornar um novo
+const personsWithCourse = persons.map(person => {
+    person.course = 'Introdução ao JavaScript';
+    return person;
+});
+
+console.log('\nPessoas com a adição do course: ', personsWithCourse);
+//Gera valores alterados percorrendo cada item da coleção de valores do array
