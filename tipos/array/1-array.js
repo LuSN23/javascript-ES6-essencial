@@ -73,3 +73,12 @@ O 0 faz o JavaScript fazer uma conversão para number de um array(idade das pess
 O age começa com 0
 Os parâmetros e a função são o handler
 */ 
+
+//Juntando operações
+const totalEvenAges = persons
+                        .filter(person => person.age % 2 === 0)
+                        .reduce((age, person) => {
+                            age += person.age;
+                            return age;
+                        }, 0);
+console.log('\nSoma de idades das pessoas que possuem idade par:', totalEvenAges);
