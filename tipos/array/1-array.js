@@ -28,3 +28,13 @@ console.log('Items: ', persons.length);
 
 //Verificar se é array
 console.log('A constante persons é um array:', Array.isArray(persons));
+
+//Iterar os itens do array
+persons.forEach(person => { //person significa cada item
+    console.log(`Nome: ${person.name}`);
+});
+/*
+persons.forEach((person, index, arr) => {
+    console.log(`Nome: ${person.name} index: ${index}`, arr);
+});
+*/
