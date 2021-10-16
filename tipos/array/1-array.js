@@ -25,3 +25,6 @@ const persons = [
 
 //Retornar a quantidade de itens de um array
 console.log('Items: ', persons.length);
+
+//Verificar se é array
+console.log('A constante persons é um array:', Array.isArray(persons));
