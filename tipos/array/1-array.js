@@ -38,3 +38,12 @@ persons.forEach((person, index, arr) => {
     console.log(`Nome: ${person.name} index: ${index}`, arr);
 });
 */
+//O método forEach executa uma determinada função em cada item do array
+
+
+//filter, map e reduce não alteram a referência do nosso objeto(imutabilidade), geram um novo
+
+//Filtrar array
+const womans = persons.filter(person => person.gender === gender.WOMAN);
+console.log('\nNova lista apenas com mulheres:', womans);
+//filter é uma condicional
