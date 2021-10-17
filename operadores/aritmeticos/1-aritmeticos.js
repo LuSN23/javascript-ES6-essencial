@@ -39,3 +39,6 @@ x--
 //Operador de exponenciação (**)
 2 ** 3 //retorna 8
 10 ** -1 //retorna 0.1
+
+//Operador de agrupamento ()
+2 * (2 + 3) //Para priorizar operações ou até condicionais (if)
