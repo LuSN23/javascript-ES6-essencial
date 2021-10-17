@@ -16,3 +16,7 @@ x *= y
 //Atribuição de divisão
 x = x / y //ou
 x /= y
+
+//Atribuição de resto
+x = x % y //ou
+x %= y
