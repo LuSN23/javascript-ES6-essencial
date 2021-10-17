@@ -28,3 +28,10 @@ const b = 2++; //2 (Incrementa depois da execução)
 
 --x
 x--
+
+//Negação (-) e Adição (+)
+-3
++'3' //retorna 3 (O + converte a string para number)
++true //retorna 1 (1s e 0s, boolean convertido para number)
++false //retorna 0
+-true //retorna -1
