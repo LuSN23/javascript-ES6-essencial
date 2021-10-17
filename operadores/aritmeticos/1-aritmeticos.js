@@ -17,3 +17,14 @@ x++
 //Operador binário. Retorna o inteiro restante da divisão dos dois operandos.
 
 12 % 5 //Retorna 2
+
+//Incremento (++) e Decremento (--)
+//Operador unário.
+++x
+x++
+
+const a = ++2; //3 (Incrementa antes da execução)
+const b = 2++; //2 (Incrementa depois da execução)
+
+--x
+x--
