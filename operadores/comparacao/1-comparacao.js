@@ -27,3 +27,7 @@ var2 > var1
 var2 >= var1
 var1 >= 3
 
+//Menor que (<)
+//Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.
+var1 < var2
+"12" < "2"
