@@ -7,3 +7,7 @@
 //Não Igual/diferente (!==)
 //Retorna verdadeiro caso os operandos não sejam iguais
 var2 != "3"
+
+//Estritamente igaul (===)
+//Retorna verdadeiro caso os operadores sejam iguais e do mesmo tipo
+3 === var1
