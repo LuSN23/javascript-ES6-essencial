@@ -31,3 +31,8 @@ var1 >= 3
 //Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.
 var1 < var2
 "12" < "2"
+
+//Menor que ou igual (<=)
+//Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.
+var1 <= var2
+var2 <= 5
