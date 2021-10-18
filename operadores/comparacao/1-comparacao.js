@@ -22,3 +22,8 @@ var1 !== "3"
 var2 > var1
 "12" > 2
 
+//Maior que ou igual (>=)
+//Retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita
+var2 >= var1
+var1 >= 3
+
