@@ -11,3 +11,9 @@ var2 != "3"
 //Estritamente igaul (===)
 //Retorna verdadeiro caso os operadores sejam iguais e do mesmo tipo
 3 === var1
+
+//Estritamente não igual/diferente (!==)
+//Retorna verdadeiro caso os operandos não sejam iguais/diferentes e/ou não sejam do mesmo tipo
+var1 !== "3"
+3 !== '3'
+
