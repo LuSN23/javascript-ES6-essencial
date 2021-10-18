@@ -17,3 +17,8 @@ var2 != "3"
 var1 !== "3"
 3 !== '3'
 
+//Maior que (>)
+//Retorna verdadeiro caso o operando da esquerda seja maior que o da direita.
+var2 > var1
+"12" > 2
+
