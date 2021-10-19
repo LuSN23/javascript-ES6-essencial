@@ -1,0 +1,4 @@
+//Deletar algo
+delete something;
+
+
