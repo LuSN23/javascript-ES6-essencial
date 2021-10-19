@@ -17,4 +17,7 @@ var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômor
 var minhaString = new String("coral"); //nesse caso é um objeto contrutor(String)
 "length" in minhaString; //retorna true
 
-
+//Objetos personalizados
+var meucarro = {marca: "Honda", modelo: "Accord", ano: 1998};
+"marca" in meucarro;   //retorna true
+"modelo" in meucarro;  //retorna true
