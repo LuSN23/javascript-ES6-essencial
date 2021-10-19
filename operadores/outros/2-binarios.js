@@ -21,3 +21,15 @@ var minhaString = new String("coral"); //nesse caso é um objeto contrutor(Strin
 var meucarro = {marca: "Honda", modelo: "Accord", ano: 1998};
 "marca" in meucarro;   //retorna true
 "modelo" in meucarro;  //retorna true
+
+//instanceof
+objeto instanceof tipoObjeto
+//Verifica se o primeiro operando é intância do segundo operando
+
+var dia = new Date(2010, 12, 17);
+
+if(dia instanceof Date) { //retorna true e executa o código abaixo
+    //code here
+}
+
+
