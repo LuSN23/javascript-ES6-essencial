@@ -36,3 +36,10 @@ Muito usado na atribuição de variáveis:
 conteudo = conteudo || 'fallback'; (se conteudo for undefined retorna o fallback) 
 fallback = Plano B para alguma ação do programador */
 
+//NOT lógico (!)
+!exp1
+
+var n1 = !true;   //!t retorna false
+var n2 = !false;  //!f retorna true
+var n3 = !"Gato"; //!t retorna false
+
