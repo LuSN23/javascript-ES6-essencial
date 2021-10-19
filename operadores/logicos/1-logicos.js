@@ -43,3 +43,20 @@ var n1 = !true;   //!t retorna false
 var n2 = !false;  //!f retorna true
 var n3 = !"Gato"; //!t retorna false
 
+//Valores considerados falsos e verdadeiros
+/*
+//true
+" "
+1
+['teste']
+
+//false
+""
+0
+[]
+
+!! //Operador extra que é para a conversão de boleanos
+//É comum para evitar esse caso: 
+var a6 = false && "Gato";
+var a6 = !!false && "Gato"; //Forçando que retorne o segundo valor
+*/
