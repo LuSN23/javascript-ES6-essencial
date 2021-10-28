@@ -48,8 +48,7 @@ const myText = String('Hello prototype!');
 
 console.log(myText.__proto__.split === String.prototype.split); //true
 //Dá true porque ambos se referem ao mesmo prototype, o de String
-
-console.log(myText.__proto__.split === String.prototype.split); //true
+//Se a comparação acima é verdadeira então posso assumir que: 
 
 console.log(myText.constructor === String); //true
 //myText é uma instância de String, portanto o constructor dela é String
