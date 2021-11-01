@@ -16,7 +16,21 @@ function Pessoa(name){ //Criando a função construtora Pessoa com o atributo na
     this.name = name;
 }
 
-const p = new Pessoa('Luciana'); //Criando um novo objeto/instanciando e passando o nome Luciana como parâmetro
+const p = new Pessoa('Luciana'); //Criando um novo objeto/instanciando e passando o nome 'Luciana' como parâmetro
 
 console.log(p); //Verificando o conteúdo
 
+//3: (Demonstrando return explícito)
+function Pessoa(name) { //Criando a função construtora Pessoa com um return explícito 
+                        //de name que é 'Teste'
+    this.name = name;
+
+    return {                                        
+        name: 'Teste'
+    };
+}
+
+const p2 = new Pessoa('Guilherme'); 
+
+//p2  Para uso no Console do navegador apenas
+console.log(p2);        //Não retorna 'Guilherme' mas o retorno explícito 'Teste'
