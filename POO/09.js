@@ -67,3 +67,15 @@ var user = {
 //O botão é envolvido por um wrapper de jQuery ($), então ele agora é um objeto 
 //jQuery a saída será "undefined" porque não há propriedade em "data" no objeto-botão.
 $('button').on('click', user.clickHandler); //"Cannot read property '0' of undefined"
+
+//EXEMPLO 03: AJUSTADO:
+/*
+Para resolver isso:
+- Como se quer que this.data faça referência a propriedade de dados de user é 
+possível usar os métodos bind(), apply() e call() para definir especificamente o 
+valor de this.
+*/
+//Ao invés de usar:
+$('button').on('click', user.clickHandler);
+//Deve-se usar:
+$('button').on('click', user.clickHandler.bind(user)); //P.Mickelson 43
