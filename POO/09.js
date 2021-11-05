@@ -138,3 +138,34 @@ user.clickHandler();
 - É comum usar that como o nome da variável para armazenar esse contexto de this
 var that = this;
 */
+
+/*
+//Ajustando this quando método é atribuido a uma variável
+- Quando se atribui um método que usa 'this' a uma variável, o valor the 'this' 
+ele se perde e acaba pegando o valor da variável global nesse caso:
+*/
+//EXEMPLO 05: Original:
+//"data" é uma variável global
+var data = [
+    {name: "Samanta", age: 12},
+    {name: "Alexis", age: 14}
+];
+
+var user = {
+    //Esse "data" é propriedade do objeto "user"
+    data: [
+        {name: "T. Woods", age: 37},
+        {name: "P. Mickelson", age: 43}
+    ],
+    showData: function(event) {
+        //Número aleatório entre 0 e 1
+        var randomNum = ( ( Math.random() * 2 | 0 ) + 1) - 1;
+
+        //Adiciona uma pessoa aleatória do array "data" ao texto
+        console.log(this.data[randomNum].name + ' ' + this.data[randomNum].age);
+    }
+}
+var showUserData = user.showData;
+//Quando a função "showUserData" é executada, os valores mostrados são da global 
+//"data", não a do array em "user".
+showUserData(); //"Samanta 12"
