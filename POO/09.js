@@ -169,3 +169,9 @@ var showUserData = user.showData;
 //Quando a função "showUserData" é executada, os valores mostrados são da global 
 //"data", não a do array em "user".
 showUserData(); //"Samanta 12"
+
+//EXEMPLO 05: Ajustado:
+//- Usando o bind para definir especificamente o valor de 'this'.
+var showUserData = user.showData.bind(user);
+
+showUserData();
