@@ -112,3 +112,29 @@ var user = {
 }
 //A o que "this" se refere? [object Window]
 user.clickHandler();
+
+//EXEMPLO 04: Ajustado:
+/*- Uma prática comum é atribuir o valor de 'this' a uma variável antes de entrar em 
+forEach:*/
+var user = {
+    tournament: "The Masters",
+    data: [
+        {name: "T. Woods", age: 37},
+        {name: "P. Mickelson", age: 43}
+    ],
+    clickHandler: function(event){
+        var theUserObj = this;
+
+        this.data.forEach(function (person){
+            console.log(person.name + ' está jogando no '+ theUserObj.tournament);
+        });
+    }
+}
+user.clickHandler();
+//"T. Woods está jogando no The Masters​"
+//"P. Mickelson está jogando no The Masters"
+
+/*
+- É comum usar that como o nome da variável para armazenar esse contexto de this
+var that = this;
+*/
