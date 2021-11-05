@@ -68,7 +68,7 @@ var user = {
 //jQuery a saída será "undefined" porque não há propriedade em "data" no objeto-botão.
 $('button').on('click', user.clickHandler); //"Cannot read property '0' of undefined"
 
-//EXEMPLO 03: AJUSTADO:
+//EXEMPLO 03: Ajustado:
 /*
 Para resolver isso:
 - Como se quer que this.data faça referência a propriedade de dados de user é 
@@ -79,3 +79,36 @@ valor de this.
 $('button').on('click', user.clickHandler);
 //Deve-se usar:
 $('button').on('click', user.clickHandler.bind(user)); //P.Mickelson 43
+
+/*
+//Ajustando this dentro de uma closure
+- Closures não podem acessar função externa usando 'this' porque essa variável é 
+acessível somente pela própria função e não para funções internas.
+- Como uma função interna não pode acessar o 'this' de uma função externa, o this
+dentro da função anônima refere-se ao objeto global window(quando o strict mode não
+tá ligado). (No exemplo abaixo).
+*/
+//EXEMPLO 04: Original:
+var user = {
+    tournament: "The Masters",
+    data: [
+        {name: "T. Woods", age: 37},
+        {name: "P. Mickelson", age: 43}
+    ],
+    clickHandler: function(){
+        //O uso de this.data aqui está certo, já que "this" se refere ao objeto 
+        //"user" e "data" é uma propriedade desse objeto.
+        this.data.forEach(function(person){
+            //Mas aqui, dentro da função anônima, "this" não mais se refere ao 
+            //objeto "user";
+            //essa função interna não pode acessar o "this" da função externa.
+            console.log('A o que "this" se refere?'+ this); //[object Window]
+
+            console.log(person.name + ' está jogando no '+ this.tournament);
+            // "T. Woods está jogando no undefined​"
+            // "P. Mickelson está jogando no undefined​"
+        });
+    }
+}
+//A o que "this" se refere? [object Window]
+user.clickHandler();
