@@ -1,4 +1,4 @@
-//Comparação herança por CLASS vs PROTOTYPE:
+//Comparação herança por PROTOTYPE vs CLASS:
 //PROTOTYPE:
 'use strict';
 
@@ -16,14 +16,23 @@ const pug = new Cachorro(false);
 
 console.log(pug); //Cachorro { qtdePatas: 4, morde: false }
 
+//CLASS:
+'use strict';
+class Animal {
+    constructor(qtdePatas) {
+        this.qtdePatas = 4;
+    }
+}
 
+class Cachorro extends Animal {
+    constructor(morde) {
+        super(4); //super é usado para acessar o objeto pai de um objeto, ou a classe pai de uma classe
+        this.morde = false;
+    }
+}
+const pug = new Cachorro(false);
 
-
-
-
-
-
-
+console.log(pug); //Cachorro { qtdePatas: 4, morde: false }
 
 /*
 - Como com prototypes era complicado criar métodos e propriedades dentro deles foi criado uma 
