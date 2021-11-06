@@ -175,3 +175,38 @@ showUserData(); //"Samanta 12"
 var showUserData = user.showData.bind(user);
 
 showUserData();
+
+/*
+//Ajustando this em "métodos emprestados"
+- this do método avg se refere ao objeto appController porque é chamado por ele e 
+não por gameController. 
+*/
+//EXEMPLO 06: Original:
+//Nós temos 2 objetos, um deles tem um método chamado avg() que o outro não tem
+//Então vamos emprestar o método avg()
+var gameController = {
+    scores: [ 20, 34, 55, 46, 77 ],
+    avgScore: null,
+    players: [
+        {name: "Tommy", playerID: 987, age: 23},
+        {name: "Paul", playerID: 87, age: 33}
+    ]
+};
+
+var appController = {
+    scores:   [ 900, 845, 809, 950 ],
+    avgScore: null,
+    avg :     function() {
+        var sumOfScores = this.scores.reduce (function (prev, cur, index, array) {
+        return prev + cur;
+    } );
+
+        this.avgScore = sumOfScores / this.scores.length;
+    }
+};
+//Se o código abaixo for executado, a propriedade "gameController.avgScore" terá a 
+//média da pontuação do array "scores" em "appController".
+
+//Este código é somente para ilustrar a situação; a intenção é que 
+//"appController.avgScore" continue "null".
+gameController.avgScore = appController.avg();
