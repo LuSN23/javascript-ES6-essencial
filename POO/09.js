@@ -210,3 +210,19 @@ var appController = {
 //Este código é somente para ilustrar a situação; a intenção é que 
 //"appController.avgScore" continue "null".
 gameController.avgScore = appController.avg();
+
+//EXEMPLO 06: Ajustado:
+/*
+- O objeto gameController toma emprestado o método avg() de appController.
+- this dentro do método appController.avg() será de gameController porque o primeiro 
+parâmetro de apply() sempre define o valor de this explicitamente.
+*/
+//Está se usando o método apply(), então o segundo argumento tem que ser um array
+appController.avg.apply(gameController, gameController.scores);
+
+//A propriedade "avgScore" foi atribuida no objeto "gameController", mesmo com o 
+//método emprestado <code>avg()</code> do objeto <code>appController</code>. 
+//console.log( gameController.avgScore ); // 46.4​ 
+// appController.avgScore ainda é "null"; 
+// somente "gameController.avgScore" foi atualizado 
+// console.log( appController.avgScore ); // null
