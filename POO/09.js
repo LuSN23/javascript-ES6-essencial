@@ -226,3 +226,12 @@ appController.avg.apply(gameController, gameController.scores);
 // appController.avgScore ainda é "null"; 
 // somente "gameController.avgScore" foi atualizado 
 // console.log( appController.avgScore ); // null
+
+//Com o ECMAScript 6 alteraram-se algumas das maneiras acima de trabalhar-se com this
+
+/*
+//Métodos de Function relacionados ao 'this':
+apply()
+call()
+bind()
+*/
