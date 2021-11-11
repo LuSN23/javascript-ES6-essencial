@@ -1,4 +1,5 @@
 //Modificadores de Acesso:
+//Maneira mais antiga: (sem uso de classe)
 'use strict';
 
 function Person(initialName) {
@@ -38,3 +39,35 @@ p.getName();         //Recupera o novo nome de p
 - Trata-se de um controle do que é privado e do que é público dentro da minha classe
 - Temos que obrigatoriamente implementar para permitir que de fora alguém altere esse valor(get e set)
 */
+
+//Maneira mais atual/talvez ainda não tenha suporte: (com uso de classe):
+'use strict';
+
+class Person {
+    #name = ''; //Método novo para definir uma variável como privada, usando #
+
+    constructor(initialName) {
+        this.#name = initialName;
+    }
+
+    setName(name) {
+        this.#name = name;
+    }
+
+    getName() {
+        return this.#name;
+    }
+} 
+console.log(p);
+//Person{}
+
+p.getName();
+//"Luciana"
+
+p.name;
+// undefined
+
+p.setName('Thiago');
+p.getName();
+//"Thiago"
+// # é o Modificador de Acesso do JavaScript
