@@ -34,3 +34,16 @@ function Pessoa() {
 
 const p = Pessoa();
 console.log(p);
+
+//02
+function Pessoa(name){
+    return {
+        name,
+        lastName: 'Sarai Nunes'
+    }
+}
+
+const p = Pessoa('Custom Name');
+console.log(p);
+//Factories não se definem apenas com propriedades estáticas, podemos definir atributos para ela
+//Nesse caso name, que é preenchido no exemplo com 'Custom Name'
