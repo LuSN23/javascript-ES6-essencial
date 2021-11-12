@@ -1,6 +1,6 @@
 //Factory:
 
-//Isso não é uma factory
+//Isto não é uma factory
 function FakeUser(){
     this.name = 'Luciana';
     this.lastName = 'Sarai Nunes';
@@ -8,7 +8,15 @@ function FakeUser(){
 const user = new FakeUser();
 
 
+//Isto é uma factory:
+function FakeUser() {
+    return {
+        name: 'Luciana',
+        lastName: 'Sarai Nunes'
+    }
+}
 
+const user = FakeUser();
 
 /*
 Todas as funções que retornam um objeto, sem a necessidade de chamá-las com o new, são consideradas 
