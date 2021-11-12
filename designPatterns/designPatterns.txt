@@ -1,0 +1,57 @@
+DESIGN PATTERNS:
+
+Definição:
+Design Patterns ou padrões de projetos são soluções generalistas para problemas recorrentes durante o 
+desenvolvimento de um software. Não se trata de um framework ou um código pronto, mas de uma definição 
+de alto nível de como um problema comum pode ser solucionado. 
+
+Formato de um pattern: 
+- Nome
+- Exemplo
+- Contexto
+- Problema
+- Solução
+
+Tipos:
+- Criação
+- Estruturais
+- Comportamentais
+
+-----------------------------------------------------------------------------------------------------
+                                      Padrões de Criação:
+Os padrões de criação são aqueles que abstraem e/ou adiam o processo de criação dos objetos. Eles 
+ajudam a tornar um sistema independente de como seus objetos são criados, compostos e representados.
+Exemplos:
+- Abstract Factory
+- Builder
+- Factory Method
+- Prototype
+- Singleton
+-----------------------------------------------------------------------------------------------------
+                                      Padrões Estruturais:
+Os padrões estruturais se preocupam com a forma como classes e objetos são compostos para formar 
+estruturas maiores.
+Exemplos:
+- Adapter                           - Business Delegate
+- Bridge                            - Flyweight
+- Composite                         - Proxy
+- Decorator                         - Facade
+-----------------------------------------------------------------------------------------------------
+                                      Padrões Comportamentais:
+Os padrões de comportamento se concentram nos algoritmos e atribuções de responsabilidades entre os 
+objetos. Eles não descrevem apenas padrões de objetos ou de classes, mas também os padrões de 
+comunicação entre os objetos.
+Exemplos: 
+- Chain of Responsability           - Observer
+- Command                           - State
+- Interpreter                       - Strategy
+- Iterator                          - Template Method
+- Mediator                          - Visitor
+------------------------------------------------------------------------------------------------------
+
+Patterns mais utilizados:
+- Factory
+- Singleton
+- Decorator
+- Observer
+- Module
