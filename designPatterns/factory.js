@@ -47,3 +47,19 @@ const p = Pessoa('Custom Name');
 console.log(p);
 //Factories não se definem apenas com propriedades estáticas, podemos definir atributos para ela
 //Nesse caso name, que é preenchido no exemplo com 'Custom Name'
+
+//03
+function Pessoa(customProperties){
+    return {
+        name: 'Luciana', //Pode ser deixado um valor padrão para o name
+        lastName: 'Sarai Nunes',
+        ...customProperties //Usando o spread operator para incluir todas as outras propriedades que 
+                            //quiser adicionar do jeito que elas vierem mesmo
+    }
+}
+
+const p = Pessoa({name:'Custom name', age: 27}); //Sobreescrevendo name e adicionando nova propriedade 
+                                                 //age. ATENÇÃO não esquecer {} envolta das propriedades 
+                                                 //em Pessoa().
+console.log(p);  //{ name: 'Custom name', lastName: 'Sarai Nunes', age: 27 }                    
+                    
