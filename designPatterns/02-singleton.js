@@ -18,4 +18,21 @@ function MyApp() {
         MyApp.instance = this; 
     }
     return MyApp.instance;     //ela já exista é retornada essa instância
+}                              //instance é só uma propriedade para controlar se foi instanciado ou não
+
+
+//Outro exemplo:
+function Pessoa() {
+    if (!Pessoa.instance) {
+        Pessoa.instance = this;
+    } 
+    return Pessoa.instance;
 }
+
+const p = Pessoa.call({name: 'Luciana'});
+const p2 = Pessoa.call({name: 'Custom Name'}); //Mesmo que alguém tentar explicitar um contexto 
+                                               //diferente, sempre retornará a mesma instância que
+                                               //eu primeiro instanciei.
+console.log(p);       //{ name: 'Luciana' }
+
+console.log(p2);      //{ name: 'Luciana' }
