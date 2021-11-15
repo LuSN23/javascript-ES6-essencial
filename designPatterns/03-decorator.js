@@ -7,6 +7,7 @@ modificá-la explicitamente.
 - Mas caso quiser usar decorator por agora, dá para usar com TypeScript usando um @ na frente
 */
 
+//Exemplo com JavaScript puro:
 let loggedIn = false;
 
 function callIfAuthenticated(fn) {
@@ -14,7 +15,7 @@ function callIfAuthenticated(fn) {
 }
 
 function sum(a, b) {
-    return a + b;
+    return a + b;     //Nada será modificado, apenas será usada por outra função
 }
 
 console.log(callIfAuthenticated(() => sum(2,3))); //Controle com callIfAuthenticated, só executa a 
@@ -30,3 +31,16 @@ console.log(callIfAuthenticated(() => sum(2, 3)));
 usuário estiver autenticado.
 - Vamos criar um decorator sem a sintaxe de decorator no JavaScript
 */
+
+
+//Exemplo usando a sintaxe de decorator (@):
+function readonly(target, name, descriptor) {
+    descriptor.writable = false; //Não pode escrever em descriptor, mexendo na propriedade do objeto
+    return descriptor; //vai ser settado o writable como false e retornado
+}
+
+class Job {
+    @readonly               //Usando a function ali de cima
+    title() {return 'CEO'}; //Definindo nova propriedade(title) como somente leitura
+}
+
