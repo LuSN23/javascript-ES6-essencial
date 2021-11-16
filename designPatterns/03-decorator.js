@@ -44,3 +44,14 @@ class Job {
     title() {return 'CEO'}; //Definindo nova propriedade(title) como somente leitura
 }
 
+//Exemplo no Angular
+@Component({ 
+    selector: 'app-reactive-favorite-color',
+    template: `
+        Favorite Color: <input type="text" [formControl]="favoriteColorControl">
+        `
+})
+export class FavoriteColorComponent {
+    favoriteColorControl = new FormControl('');
+}
+//Esse component é do Angular, temos uma class e esse component adiciona implementações nessa nossa função
