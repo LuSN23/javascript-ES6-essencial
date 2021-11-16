@@ -34,3 +34,51 @@ Uma definição bem simples de observable, basicamente ele tem que ter:
 - Um função notify()
 * O unsubscribe do exemplo não é necessário para ser observable
 */
+
+//Outro exemplo
+class Observable {
+    constructor(){
+        this.observers = [];
+    }
+
+    subscribe(fn){
+        this.observers.push(fn);
+    }
+
+    notify(data){
+        this.observers.forEach(fn => fn(data)); //Pegar a função e chamar a função passando um dado(data)
+    }
+    
+    unsubscribe(fn) {
+        this.observers = this.observers.filter(obs => obs !== fn); //Se obs só retorna o que for 
+    }                                                              //diferente dessa função(fn)
+}
+
+const o = new Observable();
+
+const logData1 = data => console.log(`Subscribe 1: ${data}`);
+const logData2 = data => console.log(`Subscribe 2: ${data}`);
+const logData3 = data => console.log(`Subscribe 3: ${data}`);
+
+o.subscribe(logData1); //Chamar a função subscribe registrando todas as const acima 
+o.subscribe(logData2);
+o.subscribe(logData3);
+
+
+o.notify('notified 1'); //Então vou chamar a função notify passando alguma coisa
+//Quando chamar o notify() tudo o que tiver na minha lista de subscribe será disparado/executado
+//O que acontece se eu der um unsubscribe em logData2:
+o.unsubscribe(logData2);
+o.notify('notified 2');
+/*
+Subscribe 1: notified 1
+Subscribe 2: notified 1
+Subscribe 3: notified 1
+Subscribe 1: notified 2
+Subscribe 3: notified 2
+ */
+
+/*
+- No constructor dela tem que ter um atributo que corresponde a uma lista, aqui é o observers
+- Em notify(data) recebe um dado 
+*/
