@@ -32,7 +32,7 @@ import Person from './models/person'; //E a importação do que a gente precisar
 
 //Com o ES6 - Exemplo 02 - Parte 1:
 
-let name = 'deafult';
+let name = 'default';
 
 function getName() {
     return name;
@@ -42,7 +42,16 @@ function setName(newName){
     name = newName;
 }
  
-module.exports = {
+module.exports = { //nova sintaxe usada com import
     getName,
     setName
 };
+/*
+CommonJS = (projeto que estabelecia convenções para módulos fora dos browsers para o JavaScript)
+- Usava o require pelo Node.js(JavaScript do servidor) para importar e exportar módulos.
+- require é mais antigo e menos poderoso. Usava a sintaxe antiga module.exports.
+ES6 = 
+- import usa ambos module.exports e exports
+- Com o import permite exportar vários pedaços de código como o require fazia, mas uma das vantagens é
+que pode importar só partes do que foi exportado.
+*/ 
