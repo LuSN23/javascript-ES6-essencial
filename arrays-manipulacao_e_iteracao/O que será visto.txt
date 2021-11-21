@@ -1,0 +1,7 @@
+- Criar um array
+- Alguns métodos
+- Inserir e remover elementos
+- Iterar elementos
+- Buscar elementos
+- Ordenar elementos
+- Transformar um array em outro tipo de dado
