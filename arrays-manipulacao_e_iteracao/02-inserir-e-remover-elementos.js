@@ -18,6 +18,7 @@ console.log(arrLength); // 4
 
 console.log(arr); // [ 'banana', 'melancia', 'abacate', 'acerola' ]
 
+
 //Método pop()
 /*
 Definição: 
@@ -59,6 +60,7 @@ frutas // (2) ["melancia", "banana"]
 frutas.unshift['laranja'] // 3
 frutas //(3) ["laranja", "melancia", "banana"]
 
+
 //Método shift()
 /*
 Definição:
@@ -76,6 +78,8 @@ console.log(arr); // [ 'melancia', 'banana']
 const frutas = ['laranja', 'melancia', 'banana'];
 frutas // (3) ["laranja", "melancia", "banana"]
 frutas.shift(); // "laranja"
+
+
 
 
 
@@ -107,6 +111,7 @@ console.log(arr2); // [ 4, 5, 6 ]
 
 console.log(novoArr); // [ 1, 2, 3, 4, 5, 6 ]
 
+
 //Método slice()
 /*
 Definição:
@@ -129,3 +134,33 @@ arr.slice(-1); // [5]
 
 arr.slice(-3); // [3, 4, 5]
 //Pegará os 3 últimos valores dos 3 últimos índices
+
+
+//Método splice()
+/*
+Definição:
+Altera um array adicionando novos elementos enquanto remove elementos antigos. Não é imutável, 
+mexe na referência do array que chama o método, ou seja, altera os arrays originais.
+- Tem como retorno os índices que forem removidos, no caso de nenhum elemento removido será [] .
+*/
+const arr = [1, 2, 3, 4, 5];
+
+arr.splice(2); // [3, 4, 5]
+//A partir do índice 2 vai ser removido em diante
+console.log(arr); // [1, 2]
+
+arr.splice(0, 0, 'first'); // [] 
+// (1º parâmetro 0 é onde vou mexer, 2º quantos itens vou remover 0, 3º o que quero adicionar 'first')
+// a partir da do parâmetro 1 que diz onde, como é índice 0 'first' fica no primeiro índice do array
+console.log(arr); // [ 'first', 1, 2 ]
+
+//Exemplo 02: (No browser)
+const frutas = ['melancia', 'banana'];
+frutas // (2) ["melancia", "banana"]
+//Supondo que quero adicionar a partir de 'melancia'
+frutas.splice(1, 0, "acerola"); // [] 
+frutas // (3) ["melancia", "acerola", "banana"]
+frutas.splice(2, 1, "laranja", "amora"); // ["banana"]
+//Remove 'banana' da posição 2 e adiciona 'laranja' e 'amora' a partir da posição 2, no lugar da 
+//'banana'
+frutas // (4) ["melancia", "acerola", "laranja", "amora"]
