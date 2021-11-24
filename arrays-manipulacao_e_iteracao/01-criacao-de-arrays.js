@@ -48,7 +48,7 @@ peopleList //(3) ["John", "Chris", "Jenny"]
 
 //Método Array.from()
 /*
-Descrição: 
+Definição: 
 Cria uma nova instância de array a partir de um parâmetro(obrigatório) array-like ou iterable object.
 array-like = são objetos que tem índices e a propriedade length, então eles são parecidos com arrays.
 Exemplo: nodeList, document.querySelector para buscar elementos.
@@ -61,8 +61,8 @@ const divs = document.querySelectorAll('div'); //Todas as divs encontradas serã
                                                //usar funções de array como pop() e forEach().
 const arr = Array.from(divs); //Para conseguir isso, uso o Array.from para transformar num array e poder 
                               //usar os métodos de array acima.
-//Exemplo 02: (Para testar no browser)
-const divs = document.querySelectorAll('div');
+//Exemplo 02: (No browser)
+const divs = document.querySelectorAll('div'); //Buscando elementos html div
 divs //Retorna uma nodeList da página atual
 //tentando usar métodos de array na NodeList:
 divs.pop // undefined
@@ -71,3 +71,5 @@ const divArray = Array.from(divs); //Transformando a NodeList num novo array
 divArray
 divArray.pop();
 divArray.shift();
+
+//No fim transforma um grupo de elementos html em um array com eles com o Array.from()
