@@ -42,3 +42,32 @@ arrWith3Positions //(3) [empty x 3]
 const peopleList = Array('John', 'Chris', 'Jenny');
 peopleList //(3) ["John", "Chris", "Jenny"]
 
+//Array.of() e Array() se baseam nos parâmetros passados
+
+
+
+//Método Array.from()
+/*
+Descrição: 
+Cria uma nova instância de array a partir de um parâmetro(obrigatório) array-like ou iterable object.
+array-like = são objetos que tem índices e a propriedade length, então eles são parecidos com arrays.
+Exemplo: nodeList, document.querySelector para buscar elementos.
+iterable object = são objetos que implementam o método Symbol.iterator(para fazer um loop/iteração).
+Exemplo: setMap().
+*/
+//Exemplo 01:
+const divs = document.querySelectorAll('div'); //Todas as divs encontradas serão armazenadas dentro da
+                                               //variável divs, no formato nodeList e por isso não posso 
+                                               //usar funções de array como pop() e forEach().
+const arr = Array.from(divs); //Para conseguir isso, uso o Array.from para transformar num array e poder 
+                              //usar os métodos de array acima.
+//Exemplo 02: (Para testar no browser)
+const divs = document.querySelectorAll('div');
+divs //Retorna uma nodeList da página atual
+//tentando usar métodos de array na NodeList:
+divs.pop // undefined
+divs.shift // undefined
+const divArray = Array.from(divs); //Transformando a NodeList num novo array
+divArray
+divArray.pop();
+divArray.shift();
