@@ -36,3 +36,25 @@ const frutas = ['melancia', 'banana', 'laranja'];
 frutas // (3) ["melancia", "banana", "laranja"]
 frutas.pop(); // "laranja"
 console.log(frutas); // ["melancia", "banana"]
+
+
+
+//Inserindo e removendo elementos no começo:
+//Método unshift()
+/*
+Definição: 
+Adicionar um ou mais elementos no início do array e retorna o tamanho do novo array
+*/
+//Exemplo 01:
+const arr = ['banana', 'melancia', 'abacate'];
+const arrLength = arr.unshift('acerola');
+
+console.log(arrLength); // 4
+
+console.log(arr); // [ 'acerola', 'banana', 'melancia', 'abacate' ]
+
+//Exemplo 02: (No browser)
+const frutas = ['melancia', 'banana'];
+frutas // (2) ["melancia", "banana"]
+frutas.unshift['laranja'] // 3
+frutas //(3) ["laranja", "melancia", "banana"]
