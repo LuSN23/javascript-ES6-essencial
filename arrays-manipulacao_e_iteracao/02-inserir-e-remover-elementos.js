@@ -76,4 +76,30 @@ console.log(arr); // [ 'melancia', 'banana']
 const frutas = ['laranja', 'melancia', 'banana'];
 frutas // (3) ["laranja", "melancia", "banana"]
 frutas.shift(); // "laranja"
+
+//Método concat()
+/*
+Definição:
+Concatena um ou mais arrays retornando um novo array. (Faz um merge) e não mexe nos arrays 
+originais(imutabilidade). 
+*/
+//Exemplo 01: (No browser)
+const frutas = ['melancia', 'banana'];
 frutas // (2) ["melancia", "banana"]
+const salgados = ['coxinha', 'kibe', 'empada'];
+const alimentos = frutas.concat(salgados);
+alimentos // (5) ["melancia", "banana", "coxinha", "kibe", "empada"]
+frutas // (2) ["melancia", "banana"]           //Não muda
+salgados // (3) ["coxinha", "kibe", "empada"]  //Não muda
+
+//Exemplo 02:
+const arr = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const novoArr = arr.concat(arr2);
+
+console.log(arr); // [ 1, 2, 3 ]
+
+console.log(arr2); // [ 4, 5, 6 ]
+
+console.log(novoArr); // [ 1, 2, 3, 4, 5, 6 ]
