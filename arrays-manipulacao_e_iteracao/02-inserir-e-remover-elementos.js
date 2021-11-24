@@ -58,3 +58,22 @@ const frutas = ['melancia', 'banana'];
 frutas // (2) ["melancia", "banana"]
 frutas.unshift['laranja'] // 3
 frutas //(3) ["laranja", "melancia", "banana"]
+
+//Método shift()
+/*
+Definição:
+Remove o primeiro elemento de um array e retorna o elemento removido.
+*/
+//Exemplo 01: 
+const arr = ['banana', 'melancia', 'abacate'];
+const removedItem = arr.shift();
+
+console.log(removedItem); // banana
+
+console.log(arr); // [ 'melancia', 'banana']
+
+//Exemplo 02: (No browser): 
+const frutas = ['laranja', 'melancia', 'banana'];
+frutas // (3) ["laranja", "melancia", "banana"]
+frutas.shift(); // "laranja"
+frutas // (2) ["melancia", "banana"]
