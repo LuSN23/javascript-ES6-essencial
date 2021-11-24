@@ -1,5 +1,6 @@
 //Inserir e remover elementos
 
+//Inserindo e removendo elementos no final:
 //Método push()
 /*
 Definição:
@@ -16,3 +17,22 @@ const arrLength = arr.push('acerola');
 console.log(arrLength); // 4
 
 console.log(arr); // [ 'banana', 'melancia', 'abacate', 'acerola' ]
+
+//Método pop()
+/*
+Definição: 
+Remove o último elemento de um array e retorna o elemento removido.
+*/
+//Exemplo 01:
+const arr = ['banana', 'melancia', 'abacate'];
+const removedItem = arr.pop();
+
+console.log(removedItem); // abacate
+
+console.log(arr); // ['banana', 'melancia']
+
+//Exemplo 02: (No browser)
+const frutas = ['melancia', 'banana', 'laranja'];
+frutas // (3) ["melancia", "banana", "laranja"]
+frutas.pop(); // "laranja"
+console.log(frutas); // ["melancia", "banana"]
