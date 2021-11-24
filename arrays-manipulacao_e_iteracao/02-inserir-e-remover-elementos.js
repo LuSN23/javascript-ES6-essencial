@@ -77,6 +77,9 @@ const frutas = ['laranja', 'melancia', 'banana'];
 frutas // (3) ["laranja", "melancia", "banana"]
 frutas.shift(); // "laranja"
 
+
+
+//Outros:
 //Método concat()
 /*
 Definição:
@@ -103,3 +106,26 @@ console.log(arr); // [ 1, 2, 3 ]
 console.log(arr2); // [ 4, 5, 6 ]
 
 console.log(novoArr); // [ 1, 2, 3, 4, 5, 6 ]
+
+//Método slice()
+/*
+Definição:
+Retorna um novo array "fatiando" o array de acordo com início e fim. (Apresenta a imutabilidade 
+também).
+*/
+//Exemplo 1:
+const arr = [1, 2, 3, 4, 5];
+
+arr.slice(0, 2); // [1, 2]
+//Começa no índice 0 e o 2 onde vai parar(para no valor 3(índice 2) e não mostra ele, então sempre 
+//colocar um índice a frente daquele que você quer).
+
+arr.slice(2); // [3, 4, 5]
+//Se colocar apenas 1 índice, ele entende que é para pegar deste índice em diante. (O valor 3 está 
+//no índice 2)
+
+arr.slice(-1); // [5]
+//Número negativo é o inverso -1(significa quantos pegar) pega a última posição e exibe o último valor
+
+arr.slice(-3); // [3, 4, 5]
+//Pegará os 3 últimos valores dos 3 últimos índices
