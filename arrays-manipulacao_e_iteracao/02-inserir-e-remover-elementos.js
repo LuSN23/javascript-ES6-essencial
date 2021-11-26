@@ -164,3 +164,4 @@ frutas.splice(2, 1, "laranja", "amora"); // ["banana"]
 //Remove 'banana' da posição 2 e adiciona 'laranja' e 'amora' a partir da posição 2, no lugar da 
 //'banana'
 frutas // (4) ["melancia", "acerola", "laranja", "amora"]
+
