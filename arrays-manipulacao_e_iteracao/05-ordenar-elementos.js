@@ -43,3 +43,14 @@ students.sort((current, next) => next.grade - current.grade);
 const arr = [1, 3, 2, 5, 4];
 
 arr.sort(); // [1, 2, 3, 4, 5]  //Apenas ordena os valores em ordem crescente
+
+
+//Método reverse()
+/*
+Definição:
+Inverte os elementos de um array.(Inverte o sentido do array).
+*/
+//Exemplo 01: 
+const arr = [1, 2, 3, 4, 5];
+
+arr.reverse(); // [ 5, 4, 3, 2, 1 ]
