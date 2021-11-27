@@ -14,3 +14,15 @@ const firstGreaterThanTwo = arr.find(value => value > 2);
 
 console.log(firstGreaterThanTwo); // 3      (Primeiro item que é maior que 2)
 
+
+//Método findIndex()
+/*
+Retorna o índice do primeiro item de um array que satisfaz a condição.
+- Diferença entre find() e findIndex() é que o 1º retorna o valor e o 2º o índice.
+*/
+//Exemplo 01:
+const arr = [1, 2, 3, 4];
+
+const firstIndexGreaterThanTwo = arr.findIndex(value => value > 2);
+
+console.log(firstIndexGreaterThanTwo); // 2
