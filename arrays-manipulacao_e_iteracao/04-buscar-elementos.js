@@ -40,3 +40,16 @@ const arr = [1, 2, 3, 4];
 const allValuesGreaterThanTwo = arr.filter(value => value > 2);
 
 console.log(allValuesGreaterThanTwo); // [ 3, 4 ]   (Array com todos os valores que são maiores que 2)
+
+
+//Método indexOf()
+/*
+Definição:
+Retorna o primeiro índice em que um elemento pode ser encontrado no array.
+*/
+//Exemplo 01:
+const arr = [1, 3, 3, 4, 3];
+
+const firstIndexOfItem = arr.indexOf(3); //Encontra em qual índice é a primeira ocorrência do 3
+
+console.log(firstIndexOfItem); // 1   (Encontrado no índice 1)
