@@ -60,6 +60,7 @@ Retorna um novo array, do mesmo tamanho, iterando cada item de um array.
 - A grande diferença entre forEach() e map() é que o forEach() só itera os elementos, o map retorna um 
 novo array desse array usado.
 - Não mexe na referência do array, retorna um novo array(imutabilidade)
+- Invoca a função callback(passada como argumento)
 */
 //Exemplo 01:
 const arr = [1, 2, 3, 4, 5];
@@ -75,3 +76,22 @@ frutas.map((fruta, index) => `${index} - ${fruta}`);
 frutas
 // (4) ["melancia", "acerola", "laranja", "amora"]
  
+
+//Método flat()
+/*
+Definição:
+Retorna um novo array com todos os elementos de um sub-array concatenados de forma recursiva de acordo 
+com a profundidade especificada(depth).
+*/
+//Exemplo 01:
+const arr = [1, 2, [3, 4]]; //Profundidade(depth) de 1, porque nada foi especificado
+
+arr.flat(); // [1, 2, 3, 4] //Aqui em flat(1) é o mesmo que flat(), por isso o resultado
+
+//Exemplo 02: (No browser)
+const idades = [120, 34, [35, 60, [70, 40]]]; //Arrays dentro de arrays
+idades // (3) [20, 34, Array(3)]  (Array(3) Porque são 2 números(2 índices) e mais 1 array em 1 índice)
+idades.flat(2); //Por padrão o flat() já desse 1 item de depth já resolvendo o 35, 60
+                //Com o 2, ele desse mais um degrau de profundidade pegando os 70, 40
+                //Isso é um 'alteração recursiva'
+// (6) [20, 34, 35, 60, 70, 40]
