@@ -81,3 +81,38 @@ const arr = [1, 3, 3, 4, 3];
 const hasItemOne = arr.includes(1); //true
 
 const hasItemTwo = arr.includes(2); //false
+
+
+//Método some()
+/*
+Definição:
+Retorna um booleano verificando se pelo menos um item de um array satisfaz a condição.
+*/
+//Exemplo 01:
+const arr = [1, 3, 3, 4, 3];  // 4 é par, então existe 1 elemento que tem resto 0 numa divisão por 2
+
+const hasSomeEvenNumber = arr.some(value => value % 2 === 0); //true
+
+//Exemplo 02: (No browser)
+const students = [
+    {name: 'John', grade: 7},
+    {name: 'Jenny', grade: 5},
+    {name: 'Peter', grade: 4}
+];
+students
+/*
+(3) [(...),(...),(...)]
+    0: {name: "John", grade: 7}
+    1: {name: "Jenny", grade: 5}
+    2: {name: "Peter", grade: 4}
+        length: 3
+        __proto: Array(0)
+*/
+//Quero saber se algum aluno passou, tirando 7 ou mais
+students.some(student => student.grade >= 7); //true
+//Se eu quisesse saber quem era esse aluno eu uso o find() (como só tem 1)
+students.find(student => student.grade >= 7); //{nome: "John", grade: 7}
+//Se eu quisesse sabem o índice desse aluno, dá para usar o findIndex() (como só tem 1)
+students.findIndex(student => student.grade >= 7); //0
+
+//*Sempre a mesma sintaxe nesses métodos.
