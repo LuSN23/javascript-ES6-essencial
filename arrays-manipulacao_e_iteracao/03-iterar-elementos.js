@@ -116,10 +116,12 @@ arr.flatMap(value => [[value * 2]]); // 2 profundidades em value * 2
 /*
 Definição:
 Retorna um Array Iterator que contém as chaves para cada elemento do array.
-- Um iterator é um objeto que emprega os iterations protocols(algumas convenções). Método @@iterator na 
-cadeia de protótipos. (Tem a ver com o emprego do método next() também, com dois valores: value e done).
+- Um iterator é um objeto que emprega os iterations protocols(algumas convenções = há o iterable 
+protocol e o iterator protocol). Método @@iterator na cadeia de protótipos. (Tem a ver com o emprego 
+do método next() também, com dois valores: value e done).
 - done será false quando a iteração ainda não tiver terminado, e true quando for o último elemento a ser 
 iterado.
+- O método next() é do prototype de Generator(GeneratorFunction)
 - value é o índice do atual elemento(porque keys pega o índice).
 - keys são os índices (com aquela ideia de chave e valor dos objetos).
 */
@@ -129,16 +131,16 @@ const arr = [1, 2, 3, 4];
 const arrIterator = arr.keys();
 
 arrIterator.next();
-//(value: 0, done: false)
+//{value: 0, done: false}
 
 arrIterator.next();
-//(value: 1, done: false)
+//{value: 1, done: false}
 
 arrIterator.next();
-//(value: 2, done: false)
+//{value: 2, done: false}
 
 arrIterator.next();
-//(value: 3, done: true)
+//{value: 3, done: true}
 
 
 //Método values()
@@ -155,16 +157,16 @@ const arr = [1, 2, 3, 4];
 const arrIterator = arr.values();
 
 arrIterator.next();
-//(value: 1, done: false)
+//{value: 1, done: false}
 
 arrIterator.next();
-//(value: 2, done: false)
+//{value: 2, done: false}
 
 arrIterator.next();
-//(value: 3, done: false)
+//{value: 3, done: false}
 
 arrIterator.next();
-//(value: 4, done: true)
+//{value: 4, done: true}
 
 
 
