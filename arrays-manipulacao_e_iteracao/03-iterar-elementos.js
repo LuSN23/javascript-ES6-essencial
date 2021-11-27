@@ -95,3 +95,19 @@ idades.flat(2); //Por padrão o flat() já desse 1 item de depth já resolvendo 
                 //Com o 2, ele desse mais um degrau de profundidade pegando os 70, 40
                 //Isso é um 'alteração recursiva'
 // (6) [20, 34, 35, 60, 70, 40]
+
+
+//Método flatMap()
+/*
+Definição:
+Retorna um novo array assim como a função map e executa um flat de profundidade 1 (junção das 2)
+- 1º executa um map() e depois um flat(1)
+*/
+//Exemplo 01: 
+const arr = [1, 2, 3, 4];
+
+arr.flatMap(value => [value * 2]); // Aqui value * 2 está dentro de 1 profundidade e o flat resolve isso
+// [2, 4, 6, 8]
+
+arr.flatMap(value => [[value * 2]]); // 2 profundidades em value * 2
+// [[2], [4], [6], [8]]              //Para monstrar que ele(flatMap()) só resolve 1 profundidade
