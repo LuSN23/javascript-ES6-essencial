@@ -111,3 +111,30 @@ arr.flatMap(value => [value * 2]); // Aqui value * 2 está dentro de 1 profundid
 
 arr.flatMap(value => [[value * 2]]); // 2 profundidades em value * 2
 // [[2], [4], [6], [8]]              //Para monstrar que ele(flatMap()) só resolve 1 profundidade
+
+//Método keys()
+/*
+Definição:
+Retorna um Array Iterator que contém as chaves para cada elemento do array.
+- Um iterator é um objeto que emprega os iterations protocols(algumas convenções). Método @@iterator na 
+cadeia de protótipos. (Tem a ver com o emprego do método next() também, com dois valores: value e done).
+- done será false quando a iteração ainda não tiver terminado, e true quando for o último elemento a ser 
+iterado.
+- value é o índice do atual elemento.
+*/
+//Exemplo 01:
+const arr = [1, 2, 3, 4];
+
+const arrIterator = arr.keys();
+
+arrIterator.next();
+//(value: 0, done: false)
+
+arrIterator.next();
+//(value: 1, done: false)
+
+arrIterator.next();
+//(value: 2, done: false)
+
+arrIterator.next();
+//(value: 3, done: true)
