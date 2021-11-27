@@ -53,3 +53,18 @@ const arr = [1, 3, 3, 4, 3];
 const firstIndexOfItem = arr.indexOf(3); //Encontra em qual índice é a primeira ocorrência do 3
 
 console.log(firstIndexOfItem); // 1   (Encontrado no índice 1)
+
+
+//Método lastIndexOf()
+/*
+Definição:
+Retorna o último índice em que um elemento pode ser encontrado no array.
+- Ao contrário de indexOf() que traz o 1º índice de uma ocorrência, traz o último índice de uma 
+ocorrência(última vez que o valor aparece).
+*/
+//Exemplo 01:
+const arr = [1, 3, 3, 4, 3];
+
+const lastIndexOfItem = arr.lastIndexOf(3);
+
+console.log(lastIndexOfItem);  // 4
