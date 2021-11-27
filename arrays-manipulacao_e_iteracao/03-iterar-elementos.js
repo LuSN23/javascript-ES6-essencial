@@ -120,7 +120,8 @@ Retorna um Array Iterator que contém as chaves para cada elemento do array.
 cadeia de protótipos. (Tem a ver com o emprego do método next() também, com dois valores: value e done).
 - done será false quando a iteração ainda não tiver terminado, e true quando for o último elemento a ser 
 iterado.
-- value é o índice do atual elemento.
+- value é o índice do atual elemento(porque keys pega o índice).
+- keys são os índices (com aquela ideia de chave e valor dos objetos).
 */
 //Exemplo 01:
 const arr = [1, 2, 3, 4];
@@ -138,3 +139,32 @@ arrIterator.next();
 
 arrIterator.next();
 //(value: 3, done: true)
+
+
+//Método values()
+/*
+Definição:
+Retorna um Array Iterator que contém os valores para cada elemento do array.
+- values são os valores (com aquela ideia de chave e valor dos objetos).
+- A diferença do método keys() para este é que ele vai pegar os values ao invés das keys.
+- value vai pegar o valor do atual elemento(porque values pega o valor).
+*/
+//Exemplo 01:
+const arr = [1, 2, 3, 4];
+
+const arrIterator = arr.values();
+
+arrIterator.next();
+//(value: 1, done: false)
+
+arrIterator.next();
+//(value: 2, done: false)
+
+arrIterator.next();
+//(value: 3, done: false)
+
+arrIterator.next();
+//(value: 4, done: true)
+
+
+
