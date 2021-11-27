@@ -170,3 +170,61 @@ arrIterator.next();
 
 
 
+//Método entries()
+/*
+Definição:
+Retorna um Array Iterator que contém os pares chave/valor para cada elemento do array.
+- Pega índice e valor. 
+- Entries = entradas.
+*/
+//Exemplo 01:
+const arr = [1, 2, 3, 4];
+
+const arrIterator = arr.entries();
+
+arrIterator.next();
+//{value: [0, 1], done: false}
+
+arrIterator.next();
+//{value: [1, 2], done: false}
+
+arrIterator.next();
+//{value: [2, 3], done: false}
+
+arrIterator.next();
+//{value: [3, 4], done: true}
+
+//Exemplo 02: (No browser)
+const frutas = ['melancia', 'acerola', 'laranja', 'amora'];
+frutas // (4) ["melancia", "acerola", "laranja", "amora"]
+const frutasIterator = frutas.entries(); //undefined
+frutasIterator //Array Iterator {}       (Array Iterator dentro de frutasIterator)
+
+frutasIterator.next();
+/*
+{value: Array(2), done: false}
+        done: false
+    value: (2) [0, "melancia"]
+    __proto: Object
+*/
+frutasIterator.next();
+/*
+{value: Array(2), done: false}
+        done: false
+    value: (2)                   //Aqui foi aberto a flechinha
+    __proto: Object
+*/
+frutasIterator.next();
+/*
+{value: Array(2), done: false}
+        done: false
+    value: (2) [2, "laranja"]
+    __proto: Object
+*/
+frutasIterator.next();
+/*
+{value: Array(2), done: true}
+        done: true
+    value: (2) [3, "amora"]
+    __proto: Object
+*/
