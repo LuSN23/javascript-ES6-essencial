@@ -26,3 +26,17 @@ const arr = [1, 2, 3, 4];
 const firstIndexGreaterThanTwo = arr.findIndex(value => value > 2);
 
 console.log(firstIndexGreaterThanTwo); // 2
+
+
+
+//Método filter()
+/*
+Definição:
+Retorna um novo array com todos os elementos que satisfazem a condição.
+*/
+//Exemplo 01:
+const arr = [1, 2, 3, 4];
+
+const allValuesGreaterThanTwo = arr.filter(value => value > 2);
+
+console.log(allValuesGreaterThanTwo); // [ 3, 4 ]   (Array com todos os valores que são maiores que 2)
