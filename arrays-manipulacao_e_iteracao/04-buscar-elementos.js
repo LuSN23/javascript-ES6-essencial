@@ -91,7 +91,9 @@ Retorna um booleano verificando se pelo menos um item de um array satisfaz a con
 //Exemplo 01:
 const arr = [1, 3, 3, 4, 3];  // 4 é par, então existe 1 elemento que tem resto 0 numa divisão por 2
 
-const hasSomeEvenNumber = arr.some(value => value % 2 === 0); //true
+const hasSomeEvenNumber = arr.some(value => value % 2 === 0); 
+
+console.log(hasSomeEvenNumber); //true
 
 //Exemplo 02: (No browser)
 const students = [
@@ -116,3 +118,28 @@ students.find(student => student.grade >= 7); //{nome: "John", grade: 7}
 students.findIndex(student => student.grade >= 7); //0
 
 //*Sempre a mesma sintaxe nesses métodos.
+
+
+//Método every()
+/*
+Definição:
+Retorna um booleano verificando se todos os itens de um array satisfazem a condição.
+- Em some() apenas 1 item satisfazendo a condição retorna true, em every() todos precisam satisfazem 
+a condição para retornar true. 
+*/
+//Exemplo 01:
+const arr = [1, 3, 3, 4, 3];
+
+const allEvenNumbers = arr.every(value => value % 2 === 0);
+
+console.log(allEvenNumbers); //false  (Nem todo valor do array é par, 1 e 3 não são)
+
+//Exemplo 02: (No browser)
+const students = [
+    {name: 'John', grade: 7},
+    {name: 'Jenny', grade: 5},
+    {name: 'Peter', grade: 4}
+];
+students.every(student => student.grade >= 7); //false
+//Se eu quiser saber o 1º estudante que não passou
+students.find(student => student.grade < 7); // {name: "Jenny", grade: 5}
