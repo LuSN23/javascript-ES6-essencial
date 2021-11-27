@@ -51,3 +51,27 @@ frutas.forEach((fruta, index, arr) => console.log(index, fruta, arr));
 2 "laranja" (4) ["melancia", "acerola", "laranja", "amora"]
 3 "amora" (4) ["melancia", "acerola", "laranja", "amora"]
 */
+
+
+//Método map()
+/*
+Definição:
+Retorna um novo array, do mesmo tamanho, iterando cada item de um array.
+- A grande diferença entre forEach() e map() é que o forEach() só itera os elementos, o map retorna um 
+novo array desse array usado.
+- Não mexe na referência do array, retorna um novo array(imutabilidade)
+*/
+//Exemplo 01:
+const arr = [1, 2, 3, 4, 5];
+
+arr.map(value => value * 2); // [2, 4, 6, 8, 10]
+
+//Exemplo 02: (No browser)
+const frutas = ['melancia', 'acerola', 'laranja', 'amora']; //array target(no qual vai ser executada a 
+                                                            //operação)
+
+frutas.map((fruta, index) => `${index} - ${fruta}`);
+// (4) ["0 - melancia", "1 - acerola", "2 - laranja", "3 - amora"]
+frutas
+// (4) ["melancia", "acerola", "laranja", "amora"]
+ 
