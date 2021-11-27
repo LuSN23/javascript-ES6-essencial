@@ -68,3 +68,16 @@ const arr = [1, 3, 3, 4, 3];
 const lastIndexOfItem = arr.lastIndexOf(3);
 
 console.log(lastIndexOfItem);  // 4
+
+//Método includes()
+/*
+Definição:
+Retorna um booleano verificando se determinado elemento existe no array.
+- Verifica o valor dos índices.
+*/
+//Exemplo 01:
+const arr = [1, 3, 3, 4, 3];
+
+const hasItemOne = arr.includes(1); //true
+
+const hasItemTwo = arr.includes(2); //false
